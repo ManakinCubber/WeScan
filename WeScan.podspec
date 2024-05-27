@@ -16,18 +16,19 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "WeScan"
-  spec.version      = "0.0.1"
-  spec.summary      = "A short description of WeScan."
-
+  spec.version      = "3.0.0"
+  spec.summary      = "A short description of WeScan, forked from https://github.com/WeTransfer/WeScan."
+  spec.swift_version = '5.0'
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+                   Forked from https://github.com/WeTransfer/WeScan
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/WeScan"
+  spec.homepage     = "https://github.com/ManakinCubber/WeScan"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,7 +39,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
+  spec.license      = "MIT"
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -63,11 +64,11 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.platform     = :ios
+  spec.platform     = :ios, "14.0"
 
   #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
+  # spec.ios.deployment_target = "14.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
@@ -80,7 +81,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/WeScan.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/ManakinCubber/WeScan.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,8 +92,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "Sources/WeScan/**/*"
+  spec.exclude_files = "Sources/WeScan/Resources"
 
   # spec.public_header_files = "Classes/**/*.h"
 
