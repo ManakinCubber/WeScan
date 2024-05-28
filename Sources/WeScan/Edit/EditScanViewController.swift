@@ -10,7 +10,7 @@ import AVFoundation
 import UIKit
 
 /// The `EditScanViewController` offers an interface for the user to edit the detected quadrilateral.
-final class EditScanViewController: UIViewController {
+public final class EditScanViewController: UIViewController {
 
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -67,7 +67,7 @@ final class EditScanViewController: UIViewController {
 
     // MARK: - Life Cycle
 
-    init(image: UIImage, quad: Quadrilateral?, rotateImage: Bool = true) {
+    public init(image: UIImage, quad: Quadrilateral?, rotateImage: Bool = true) {
         self.image = rotateImage ? image.applyingPortraitOrientation() : image
         self.quad = quad ?? EditScanViewController.defaultQuad(forImage: image)
         super.init(nibName: nil, bundle: nil)

@@ -196,7 +196,7 @@ public struct ImageScannerResults {
     /// The detected rectangle which was used to generate the `scannedImage`.
     public var detectedRectangle: Quadrilateral
 
-    init(
+    public init(
         detectedRectangle: Quadrilateral,
         originalScan: ImageScannerScan,
         croppedScan: ImageScannerScan,

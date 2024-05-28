@@ -219,7 +219,7 @@ extension Quadrilateral {
     /// - Parameters:
     ///   - height: The height of the rect containing the quadrilateral.
     /// - Returns: The same quadrilateral in the cartesian coordinate system.
-    func toCartesian(withHeight height: CGFloat) -> Quadrilateral {
+    public func toCartesian(withHeight height: CGFloat) -> Quadrilateral {
         let topLeft = self.topLeft.cartesian(withHeight: height)
         let topRight = self.topRight.cartesian(withHeight: height)
         let bottomRight = self.bottomRight.cartesian(withHeight: height)
