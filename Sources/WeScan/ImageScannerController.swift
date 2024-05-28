@@ -157,6 +157,10 @@ public struct ImageScannerScan {
 
     public var image: UIImage
 
+    public init(image: UIImage) {
+        self.image = image
+    }
+
     public func generatePDFData(completion: @escaping (Result<Data, ImageScannerError>) -> Void) {
         DispatchQueue.global(qos: .userInteractive).async {
             if let pdfData = self.image.pdfData() {
