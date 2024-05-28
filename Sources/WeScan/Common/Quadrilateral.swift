@@ -124,7 +124,7 @@ public struct Quadrilateral: Transformable {
 
     /// Reorganizes the current quadrilateral, making sure that the points are at their appropriate positions.
     /// For example, it ensures that the top left point is actually the top and left point point of the quadrilateral.
-    mutating func reorganize() {
+    public mutating func reorganize() {
         let points = [topLeft, topRight, bottomRight, bottomLeft]
         let ySortedPoints = sortPointsByYValue(points)
 
